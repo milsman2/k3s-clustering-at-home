@@ -1,0 +1,48 @@
+k3sup install \                           
+--cluster \
+--ip 192.168.30.15 \
+--k3s-channel stable \
+--k3s-extra-args '--no-deploy traefik --no-deploy servicelb --write-kubeconfig-mode 644' \
+--merge \
+--context k3s-ha-pi \
+--local-path $HOME/.kube/config \
+--user miles \
+--tls-san 192.168.30.69
+
+k3sup join \                              
+--cluster \
+--ip 192.168.30.17 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server 192.168.30.15 \
+--server
+
+k3sup join \            
+--ip 192.168.30.19 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.30.15 \
+--server
+
+k3sup join \            
+--ip 192.168.30.20 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.30.15
+
+ k3sup join \            
+--ip 192.168.30.22 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.30.15
+
+k3sup join \
+--ip 192.168.30.23 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.30.15
