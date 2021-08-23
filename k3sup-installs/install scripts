@@ -1,3 +1,5 @@
+# Iniitial Install
+
 k3sup install \                           
 --cluster \
 --ip 192.168.30.15 \
@@ -46,3 +48,14 @@ k3sup join \
 --user miles \
 --server-user miles \
 --server-ip 192.168.30.15
+
+# Followup changes - ssh into each agent node and now point it at the EIP by running sudo nano /etc/systemd/system/k3s-agent.service.env
+# Edit the IP to be pointed at the EIP
+# Run the following - 
+sudo systemctl daemon-reload && \
+  sudo systemctl restart k3s-agent
+
+# After that change has been done on every agent node, now run sudo nano ~/.kube/config and point it at the EIP
+kubectl get nodes -o wide 
+
+# At this point you should see the whole cluster being accessed via the EIP and be good to go
