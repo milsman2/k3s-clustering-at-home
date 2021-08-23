@@ -1,4 +1,4 @@
-# Iniitial Install
+# Initial Install
 
 k3sup install \                           
 --cluster \
