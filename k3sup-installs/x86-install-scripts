@@ -1,6 +1,6 @@
 # Initial Install
 
-k3sup install \                           
+k3sup install \
 --cluster \
 --ip 192.168.20.104 \
 --k3s-channel stable \
@@ -11,8 +11,7 @@ k3sup install \
 --user miles \
 --tls-san 192.168.20.69
 
-k3sup join \                              
---cluster \
+k3sup join \
 --ip 192.168.20.105 \
 --k3s-channel stable \
 --user miles \
@@ -20,7 +19,7 @@ k3sup join \
 --server-ip 192.168.20.15 \
 --server
 
-k3sup join \            
+k3sup join \
 --ip 192.168.20.106 \
 --k3s-channel stable \
 --user miles \
@@ -28,7 +27,7 @@ k3sup join \
 --server-ip 192.168.20.15 \
 --server
 
-k3sup join \            
+k3sup join \
 --ip 192.168.20.107 \
 --k3s-channel stable \
 --user miles \
