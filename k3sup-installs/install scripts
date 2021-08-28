@@ -17,7 +17,7 @@ k3sup join \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server 192.168.30.15 \
+--server-ip 192.168.30.15 \
 --server
 
 k3sup join \            
