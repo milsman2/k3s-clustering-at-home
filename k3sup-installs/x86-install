@@ -1,0 +1,61 @@
+# Initial Install
+
+k3sup install \                           
+--cluster \
+--ip 192.168.20.104 \
+--k3s-channel stable \
+--k3s-extra-args '--no-deploy traefik --no-deploy servicelb --write-kubeconfig-mode 644' \
+--merge \
+--context k3s-ha-x86 \
+--local-path $HOME/.kube/config \
+--user miles \
+--tls-san 192.168.20.69
+
+k3sup join \                              
+--cluster \
+--ip 192.168.20.105 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.20.15 \
+--server
+
+k3sup join \            
+--ip 192.168.20.106 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.20.15 \
+--server
+
+k3sup join \            
+--ip 192.168.20.107 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.20.15
+
+ k3sup join \            
+--ip 192.168.20.108 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.20.15
+
+k3sup join \
+--ip 192.168.20.109 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.20.15
+
+# Followup changes - ssh into each agent node and now point it at the EIP by running sudo nano /etc/systemd/system/k3s-agent.service.env
+# Edit the IP to be pointed at the EIP
+# Run the following - 
+sudo systemctl daemon-reload && \
+  sudo systemctl restart k3s-agent
+
+# After that change has been done on every agent node, now run sudo nano ~/.kube/config and point it at the EIP
+kubectl get nodes -o wide 
+
+# At this point you should see the whole cluster being accessed via the EIP and be good to go
