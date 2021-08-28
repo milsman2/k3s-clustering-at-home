@@ -16,7 +16,7 @@ k3sup join \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.105 \
+--server-ip 192.168.20.104 \
 --server
 
 k3sup join \
@@ -24,7 +24,7 @@ k3sup join \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.105 \
+--server-ip 192.168.20.104 \
 --server
 
 k3sup join \
@@ -32,14 +32,14 @@ k3sup join \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.105
+--server-ip 192.168.20.104
 
  k3sup join \            
 --ip 192.168.20.108 \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.105
+--server-ip 192.168.20.104
 
 k3sup join \
 --ip 192.168.20.109 \
