@@ -46,7 +46,7 @@ k3sup join \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.105
+--server-ip 192.168.20.104
 
 # Followup changes - ssh into each agent node and now point it at the EIP by running sudo nano /etc/systemd/system/k3s-agent.service.env
 # Edit the IP to be pointed at the EIP
