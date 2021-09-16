@@ -17,7 +17,8 @@ k3sup join \
 --user miles \
 --server-user miles \
 --server-ip 192.168.30.15 \
---server
+--server \
+--k3s-extra-args '--disable traefik --disable servicelb --write-kubeconfig-mode 644'
 
 k3sup join \
 --ip 192.168.30.19 \
@@ -25,7 +26,8 @@ k3sup join \
 --user miles \
 --server-user miles \
 --server-ip 192.168.30.15 \
---server
+--server \
+--k3s-extra-args '--disable traefik --disable servicelb --write-kubeconfig-mode 644'
 
 k3sup join \
 --ip 192.168.30.20 \
