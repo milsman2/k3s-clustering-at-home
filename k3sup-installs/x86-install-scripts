@@ -4,7 +4,7 @@ k3sup install \
 --cluster \
 --ip 192.168.20.104 \
 --k3s-channel stable \
---k3s-extra-args '--disable traefik --disable servicelb --write-kubeconfig-mode 644' \
+--k3s-extra-args '--disable traefik --disable servicelb --write-kubeconfig-mode 644 --no-deploy traefik --no-deploy servicelb' \
 --merge \
 --context k3s-ha-x86 \
 --local-path $HOME/.kube/config \
