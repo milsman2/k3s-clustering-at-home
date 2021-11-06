@@ -2,7 +2,7 @@
 
 k3sup install \
 --cluster \
---ip 192.168.20.104 \
+--ip 192.168.20.165 \
 --k3s-channel stable \
 --k3s-extra-args '--disable servicelb --disable traefik --write-kubeconfig-mode 644' \
 --merge \
@@ -12,7 +12,7 @@ k3sup install \
 --tls-san 192.168.20.69
 
 k3sup join \
---ip 192.168.20.105 \
+--ip 192.168.20.163 \
 --k3s-channel stable \
 --k3s-extra-args '--disable servicelb --disable traefik --write-kubeconfig-mode 644' \
 --user miles \
@@ -21,7 +21,7 @@ k3sup join \
 --server
 
 k3sup join \
---ip 192.168.20.106 \
+--ip 192.168.20.160 \
 --k3s-channel stable \
 --k3s-extra-args '--disable servicelb --disable traefik --write-kubeconfig-mode 644' \
 --user miles \
@@ -30,21 +30,35 @@ k3sup join \
 --server
 
 k3sup join \
---ip 192.168.20.107 \
+--ip 192.168.20.158 \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
 --server-ip 192.168.20.104
 
 k3sup join \
---ip 192.168.20.108 \
+--ip 192.168.20.159 \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
 --server-ip 192.168.20.104
 
 k3sup join \
---ip 192.168.20.109 \
+--ip 192.168.20.168 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.20.104
+
+k3sup join \
+--ip 192.168.20.169 \
+--k3s-channel stable \
+--user miles \
+--server-user miles \
+--server-ip 192.168.20.104
+
+k3sup join \
+--ip 192.168.20.162 \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
