@@ -17,7 +17,7 @@ k3sup join \
 --k3s-extra-args '--disable servicelb --disable traefik --write-kubeconfig-mode 644' \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.104 \
+--server-ip 192.168.20.165 \
 --server
 
 k3sup join \
@@ -26,7 +26,7 @@ k3sup join \
 --k3s-extra-args '--disable servicelb --disable traefik --write-kubeconfig-mode 644' \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.104 \
+--server-ip 192.168.20.165 \
 --server
 
 k3sup join \
@@ -34,35 +34,35 @@ k3sup join \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.104
+--server-ip 192.168.20.165
 
 k3sup join \
 --ip 192.168.20.159 \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.104
+--server-ip 192.168.20.165
 
 k3sup join \
 --ip 192.168.20.168 \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.104
+--server-ip 192.168.20.165
 
 k3sup join \
 --ip 192.168.20.169 \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.104
+--server-ip 192.168.20.165
 
 k3sup join \
 --ip 192.168.20.162 \
 --k3s-channel stable \
 --user miles \
 --server-user miles \
---server-ip 192.168.20.104
+--server-ip 192.168.20.165
 
 # Followup changes - ssh into each agent node and now point it at the EIP by running sudo nano /etc/systemd/system/k3s-agent.service.env
 # Edit the IP to be pointed at the EIP
