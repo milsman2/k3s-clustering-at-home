@@ -12,6 +12,11 @@ k3sup install \
 
 wait
 
+export KUBECONFIG=/home/miles/.kube/config
+kubectl config set-context k3s-ha-amd64
+
+wait
+
 echo ""
 echo "Server 1 complete!"
 echo ""
@@ -121,11 +126,7 @@ echo ""
 echo "Server 8 complete!"
 echo ""
 
-export KUBECONFIG=/home/miles/.kube/config
-
 wait
-
-kubectl config set-context k3s-ha-amd64
 
 echo "All Servers Installed!"
 
