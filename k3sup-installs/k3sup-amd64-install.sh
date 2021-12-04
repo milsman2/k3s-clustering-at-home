@@ -21,8 +21,6 @@ echo ""
 echo "Server 1 complete!"
 echo ""
 
-wait
-
 k3sup join \
 --ip 192.168.20.206 \
 --k3s-channel stable \
@@ -37,8 +35,6 @@ wait
 echo ""
 echo "Server 2 complete!"
 echo ""
-
-wait
 
 k3sup join \
 --ip 192.168.20.207 \
@@ -55,8 +51,6 @@ echo ""
 echo "Server 3 complete!"
 echo ""
 
-wait
-
 k3sup join \
 --ip 192.168.20.208 \
 --k3s-channel stable \
@@ -69,8 +63,6 @@ wait
 echo ""
 echo "Server 4 complete!"
 echo ""
-
-wait
 
 k3sup join \
 --ip 192.168.200.209 \
@@ -85,8 +77,6 @@ echo ""
 echo "Server 5 complete!"
 echo ""
 
-wait
-
 k3sup join \
 --ip 192.168.20.210 \
 --k3s-channel stable \
@@ -99,8 +89,6 @@ wait
 echo ""
 echo "Server 6 complete!"
 echo ""
-
-wait
 
 k3sup join \
 --ip 192.168.20.212 \
